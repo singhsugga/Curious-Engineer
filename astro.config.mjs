@@ -4,6 +4,8 @@ import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
+import { manifest } from "./src/config";
+import { VitePWA } from "vite-plugin-pwa"
 
 // https://astro.build/config
 export default defineConfig({
