@@ -42,8 +42,8 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <link rel="sitemap" href="/sitemap-index.xml">
-    <link rel="sitemap" href="/sitemap-0.xml">
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href="/sitemap-0.xml" />
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -65,9 +65,11 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet"
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-      as="font"  crossorigin
+      as="font"
+      crossorigin
     />
 
     {
@@ -84,14 +86,20 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 
     <script is:inline src="/toggle-theme.js"></script>
     <!-- Google tag (gtag.js) -->
-<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-HRXFLVBVMS"></script>
-<script type="text/partytown">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HRXFLVBVMS"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-HRXFLVBVMS');
-</script>
+      gtag("config", "G-HRXFLVBVMS");
+    </script>
   </head>
   <body>
     <slot />
