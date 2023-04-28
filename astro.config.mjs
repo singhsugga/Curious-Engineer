@@ -6,11 +6,16 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { manifest } from "./src/config";
 import { VitePWA } from "vite-plugin-pwa"
-
+import { partytown } from "@astrojs/partytown"
 // https://astro.build/config
 export default defineConfig({
   site: "https://curiousengineer.dev/",
   integrations: [
+    partytown({
+      config: { 
+        forward: ["dataLayer.push"] 
+      },
+    }),
     tailwind({
       config: {
         applyBaseStyles: false,
